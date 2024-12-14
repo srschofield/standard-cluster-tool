@@ -92,11 +92,6 @@ sct Si2024 -gaussian "2'4'2'" > my_cluster.gjf
 ```
 Creates a cluster with varying depth, combining numbers for different depths.
 
----
-
-You can now paste this text into your `README.md` file without formatting issues.
-
-
 
 ## Installation
 
