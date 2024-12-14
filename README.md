@@ -1,4 +1,61 @@
-# Standard Cluster Tool
+# Standard Cluster Tool - v1.6 (14 December 2024)  
+Oliver Warschkow, Steven R. Schofield, University College London 
+
+## Running
+
+Usage:   stc <template> [<options> ...] <cluster-descriptor>
+
+Templates:  Si           Si(001) surface template generated using
+                         VASP GGA_DFT (Warschkow et al. Surf.Sci. 2007).
+            Si2024       Si(001) surface template generated using
+                         CASTEP v19, PBE, USP, (8x4x1) MP, 800 eV, 20 layers (Schofield 2024).
+            Ge2024       Ge(001) surface template generated using
+                         CASTEP v19, PBE, USP, (8x4x1) MP, 800 eV, 20 layers (Schofield 2024).
+            DSi          Si(001) surface template generated using
+                         DMol3 PBE/DZP. (Tracey et al, JCP 2012).
+Options:    -p2x1        Selects a p(2x1) flat-dimer pattern.
+                         This is the default dimer-buckling pattern.
+            -c4x2        Selects a c(4x2) buckled dimer pattern.
+            -c4x2inv     Selects a c(4x2) buckled dimer pattern
+                         with opposite orientation to the -c4x2 option.
+            -p2x2        Selects a p(2x2) buckled dimer pattern.
+            -p2x2inv     Selects a p(2x2) buckled dimer pattern
+                         with opposite orientation to the -c2x2 option.
+            -xyz         Prints cluster in XYZ file format.
+                         This is the default output format.
+            -gaussian    Prints cluster as a Gaussian input
+                         structure with opt=ModRedunant
+                         constraint flags.
+            -ascending   Prints structure ordered by atomic layer
+                         starting with the deepest layer. This is
+                         the default ordering of atoms.
+            -descending  Prints structure ordered by atomic layer
+                         surface (dimer) layer.
+            -hfirst      Reorders atoms so that the terminating
+                         hydrogen atoms come before any of the
+                         cluster atoms. This is the default order
+                         in which atoms are outputted.
+            -hlast       Reorders atoms so that the terminating
+                         hydrogen atoms come after the cluster
+                         atoms.
+
+Example use:
+  ./stc Si2024 -gaussian "4'"
+      Creates a single-dimer, single-row Si9H12 cluster in Gaussian input format.
+      Note: The third argument is written as "<four><prime>", where "four" refers
+      to the number of silicon layers below the dimer, and "prime" indicates that
+      this is not a "wide" cluster.
+
+  ./stc Si2024 -gaussian "4'4'"
+      Creates a two-dimer cluster Si15H16.
+
+  ./stc Si2024 -gaussian "4'4'|4'4'"
+      Creates a four-dimer-in-two-rows cluster Si35H32.
+      Note: Each "four" has a prime, and rows are separated by a vertical bar.
+
+  ./stc Si2024 -gaussian "2'4'2'"
+      Creates a cluster with varying depth, combining numbers for different depths.
+
 
 ## Installation
 
