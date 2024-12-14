@@ -1,0 +1,19 @@
+! CASTEP 19 calculations
+! PBE functional
+! On-the-fly-generated ultrasoft pseudopotentials
+! 8x8x8 MP mesh
+! 800 eV plane wave cut off
+
+! SILICON
+%block lattice_cart	
+     2.7340885     2.7340885     0.0000000
+     2.7340885     0.0000000     2.7340885
+     0.0000000     2.7340885     2.7340885
+%endblock lattice_cart
+
+! GERMANIUM
+%block lattice_cart	
+     2.8808918     2.8808918     0.0000000
+     2.8808918     0.0000000     2.8808918
+     0.0000000     2.8808918     2.8808918
+%endblock lattice_cart

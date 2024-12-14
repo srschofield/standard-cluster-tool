@@ -1,0 +1,8 @@
+# .gitignore
+*.o
+*.so
+*.dll
+*.exe
+*.pyc
+*.swp
+*.tmp
