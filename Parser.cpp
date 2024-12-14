@@ -209,17 +209,17 @@ int Parser::readArguments(int argc, char *argv[]) {
         fprintf(stderr,"\n");
 
         fprintf(stderr,"Example use:\n");
-        fprintf(stderr,"  ./stc Si2024 -gaussian \"4'\"\n");
+        fprintf(stderr,"  sct Si2024 -gaussian \"4'\" > my_cluster.gjf \n");
         fprintf(stderr,"      Creates a single-dimer, single-row Si9H12 cluster in Gaussian input format.\n");
         fprintf(stderr,"      Note: The third argument is written as \"<four><prime>\", where \"four\" refers\n");
         fprintf(stderr,"      to the number of silicon layers below the dimer, and \"prime\" indicates that\n");
         fprintf(stderr,"      this is not a \"wide\" cluster.\n\n");
-        fprintf(stderr,"  ./stc Si2024 -gaussian \"4'4'\"\n");
+        fprintf(stderr,"  sct Si2024 -gaussian \"4'4'\" > my_cluster.gjf \n");
         fprintf(stderr,"      Creates a two-dimer cluster Si15H16.\n\n");
-        fprintf(stderr,"  ./stc Si2024 -gaussian \"4'4'|4'4'\"\n");
+        fprintf(stderr,"  sct Si2024 -gaussian \"4'4'|4'4'\" > my_cluster.gjf \n");
         fprintf(stderr,"      Creates a four-dimer-in-two-rows cluster Si35H32.\n");
         fprintf(stderr,"      Note: Each \"four\" has a prime, and rows are separated by a vertical bar.\n\n");
-        fprintf(stderr,"  ./stc Si2024 -gaussian \"2'4'2'\"\n");
+        fprintf(stderr,"  sct Si2024 -gaussian \"2'4'2'\" > my_cluster.gjf \n");
         fprintf(stderr,"      Creates a cluster with varying depth, combining numbers for different depths.\n");
         fprintf(stderr,"\n");
 	
