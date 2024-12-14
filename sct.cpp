@@ -9,8 +9,8 @@
 
 int main(int argc, char *argv[]) {
 
-    fprintf(stderr,"Standard Cluster Tool - v1.5 (6 August 2012)\n");
-    fprintf(stderr,"Oliver Warschkow, School of Physics, The University of Sydney\n");
+    fprintf(stderr,"Standard Cluster Tool - v1.6 (14 December 2024)\n");
+    fprintf(stderr,"Oliver Warschkow, Steven R. Schofield, University College London \n");
 
     Parser parser;
     

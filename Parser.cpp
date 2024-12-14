@@ -172,7 +172,7 @@ int Parser::_readClusterDescriptor(char *descr) {
 int Parser::readArguments(int argc, char *argv[]) {
         
     if(argc==1) {
-        fprintf(stderr,"Usage:   stc <template> [<options> ...] <cluster-descriptor>\n\n");
+        fprintf(stderr,"Usage:   sct <template> [<options> ...] <cluster-descriptor>\n\n");
         fprintf(stderr,"Templates:  Si           Si(001) surface template generated using\n");
         fprintf(stderr,"                         VASP GGA_DFT (Warschkow et al. Surf.Sci. 2007).\n");
 	fprintf(stderr,"            Si2024       Si(001) surface template generated using\n");
